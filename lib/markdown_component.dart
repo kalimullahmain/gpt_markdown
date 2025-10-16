@@ -221,20 +221,20 @@ class HTag extends BlockMd {
             conf,
             false,
           )),
-          if (match.namedGroup('hash')!.length == 1) ...[
-            const TextSpan(
-              text: "\n ",
-              style: TextStyle(fontSize: 0, height: 0),
-            ),
-            WidgetSpan(
-              child: CustomDivider(
-                height: theme.hrLineThickness,
-                color:
-                    config.style?.color ??
-                    Theme.of(context).colorScheme.outline,
-              ),
-            ),
-          ],
+          // if (match.namedGroup('hash')!.length == 1) ...[
+          //   const TextSpan(
+          //     text: "\n ",
+          //     style: TextStyle(fontSize: 0, height: 0),
+          //   ),
+          //   WidgetSpan(
+          //     child: CustomDivider(
+          //       height: theme.hrLineThickness,
+          //       color:
+          //           config.style?.color ??
+          //           Theme.of(context).colorScheme.outline,
+          //     ),
+          //   ),
+          // ],
         ],
       ),
     );

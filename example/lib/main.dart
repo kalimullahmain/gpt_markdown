@@ -75,7 +75,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextDirection _direction = TextDirection.ltr;
   final TextEditingController _controller = TextEditingController(
-    text: r'''This is a sample markdown document.
+    text: r'''# This is a sample markdown document.
 * **bold**
 * *italic*
 * **_bold and italic_**
@@ -457,10 +457,8 @@ This document was created to test the robustness of Markdown parsers and to ensu
                                           useDollarSignsForLatex,
                                       textAlign: TextAlign.justify,
                                       textScaler: const TextScaler.linear(1),
-                                      style: const TextStyle(
-                                          // fontFamily: 'monospace',
-                                          // fontWeight: FontWeight.bold,
-                                          ),
+                                      style: TextStyle(fontFamily: 'PTSerif'),
+
                                       highlightBuilder: (context, text, style) {
                                         return Container(
                                           padding: const EdgeInsets.symmetric(
@@ -621,75 +619,6 @@ This document was created to test the robustness of Markdown parsers and to ensu
                                           ),
                                         );
                                       },
-
-                                      // tableBuilder: (context, tableRows,
-                                      //     textStyle, config) {
-                                      //   return Table(
-                                      //     border: TableBorder.all(
-                                      //       width: 1,
-                                      //       color: Colors.red,
-                                      //     ),
-                                      //     children: tableRows.map((e) {
-                                      //       return TableRow(
-                                      //         children: e.fields.map((e) {
-                                      //           return Text(e.data);
-                                      //         }).toList(),
-                                      //       );
-                                      //     }).toList(),
-                                      //   );
-                                      // },
-
-                                      // components: [
-                                      //   CodeBlockMd(),
-                                      //   NewLines(),
-                                      //   BlockQuote(),
-                                      //   ImageMd(),
-                                      //   ATagMd(),
-                                      //   TableMd(),
-                                      //   HTag(),
-                                      //   UnOrderedList(),
-                                      //   OrderedList(),
-                                      //   RadioButtonMd(),
-                                      //   CheckBoxMd(),
-                                      //   HrLine(),
-                                      //   StrikeMd(),
-                                      //   BoldMd(),
-                                      //   ItalicMd(),
-                                      //   LatexMath(),
-                                      //   LatexMathMultiLine(),
-                                      //   HighlightedText(),
-                                      //   SourceTag(),
-                                      //   IndentMd(),
-                                      // ],
-                                      // inlineComponents: [
-                                      //   ImageMd(),
-                                      //   ATagMd(),
-                                      //   TableMd(),
-                                      //   StrikeMd(),
-                                      //   BoldMd(),
-                                      //   ItalicMd(),
-                                      //   LatexMath(),
-                                      //   LatexMathMultiLine(),
-                                      //   HighlightedText(),
-                                      //   SourceTag(),
-                                      // ],
-                                      // codeBuilder: (context, name, code, closed) {
-                                      //   return Padding(
-                                      //     padding: const EdgeInsets.symmetric(
-                                      //         horizontal: 16),
-                                      //     child: Text(
-                                      //       code.trim(),
-                                      //       style: TextStyle(
-                                      //         fontFamily: 'JetBrains Mono',
-                                      //         fontSize: 14,
-                                      //         height: 1.5,
-                                      //         color: Theme.of(context)
-                                      //             .colorScheme
-                                      //             .onSurface,
-                                      //       ),
-                                      //     ),
-                                      //   );
-                                      // }
                                     );
                                     if (selectable) {
                                       child = SelectionArea(
@@ -713,6 +642,7 @@ This document was created to test the robustness of Markdown parsers and to ensu
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextField(
+                          style: TextStyle(fontFamily: "PTSerif"),
                           decoration: const InputDecoration(
                               border: OutlineInputBorder(),
                               label: Text("Type here:")),

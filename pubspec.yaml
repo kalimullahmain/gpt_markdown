@@ -22,6 +22,9 @@ flutter:
     - family: JetBrainsMono
       fonts:
         - asset: lib/fonts/JetBrainsMono-Regular.ttf
+    - family: PTSerif
+      fonts:
+        - asset: lib/fonts/PTSerif-Regular.ttf
 
 topics:
   - markdown

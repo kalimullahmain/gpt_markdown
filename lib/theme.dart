@@ -15,7 +15,7 @@ class GptMarkdownThemeData extends ThemeExtension<GptMarkdownThemeData> {
     required this.linkColor,
     required this.linkHoverColor,
   });
-  //sdaf
+
   /// A factory constructor for `GptMarkdownThemeData`.
   factory GptMarkdownThemeData({
     required Brightness brightness,
@@ -77,12 +77,12 @@ class GptMarkdownThemeData extends ThemeExtension<GptMarkdownThemeData> {
   ) {
     return GptMarkdownThemeData._(
       highlightColor: theme.colorScheme.onSurfaceVariant.withAlpha(50),
-      h1: textTheme.headlineLarge,
-      h2: textTheme.headlineMedium,
-      h3: textTheme.headlineSmall,
-      h4: textTheme.titleLarge,
-      h5: textTheme.titleMedium,
-      h6: textTheme.titleSmall,
+      h1: textTheme.headlineLarge?.copyWith(fontFamily: 'PTSerif'),
+      h2: textTheme.headlineMedium?.copyWith(fontFamily: 'PTSerif'),
+      h3: textTheme.headlineSmall?.copyWith(fontFamily: 'PTSerif'),
+      h4: textTheme.titleLarge?.copyWith(fontFamily: 'PTSerif'),
+      h5: textTheme.titleMedium?.copyWith(fontFamily: 'PTSerif'),
+      h6: textTheme.titleSmall?.copyWith(fontFamily: 'PTSerif'),
       hrLineThickness: 1,
       hrLineColor: theme.colorScheme.outline,
       linkColor: Colors.blue,
