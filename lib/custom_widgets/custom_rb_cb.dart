@@ -39,6 +39,7 @@ class CustomRb extends StatelessWidget {
                 child: Radio(
                   value: value,
                   groupValue: true,
+                  onChanged: (value) {},
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
               ),
